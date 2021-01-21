@@ -40,14 +40,18 @@ section {
 .services,
 .skills,
 .teams,
+.posts,
 .contact,
+.planos,
 footer {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.contact .contact-content {
+.contact .contact-content,
+.posts .posts-content,
+.planos .posts-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -62,16 +66,7 @@ section .title {
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
 }
-section .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  background: #111;
-  transform: translateX(-50%);
-}
+
 section .title::after {
   position: absolute;
   bottom: -8px;
@@ -79,8 +74,17 @@ section .title::after {
   font-size: 20px;
   color: #4cc9f0;
   padding: 0 5px;
-  background: #fff;
   transform: translateX(-50%);
+}
+@media (max-width: 1146px) {
+  .planos .title::after {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    font-size: 20px;
+    color: #4cc9f0;
+    transform: translateX(-50%);
+  }
 }
 
 /* navbar styling */
@@ -109,6 +113,9 @@ section .title::after {
 .navbar .logo a span {
   color: #4cc9f0;
   transition: all 0.3s ease;
+}
+.navbar .logo a img {
+  padding: 0 10px 8px 0;
 }
 .navbar.sticky .logo a span {
   color: #fff;
@@ -217,13 +224,13 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
-  content: "who i am";
+  content: "Um resumo da minha jornada.";
 }
 .about .about-content .left {
   width: 45%;
 }
 .about .about-content .left img {
-  height: 400px;
+  height: 450px;
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
@@ -261,27 +268,33 @@ section .title::after {
 
 /* services section styling */
 .services,
-.teams {
+.teams,
+.posts {
   color: #fff;
   background: #111;
 }
 .services .title::before,
-.teams .title::before {
+.teams .title::before,
+.post .title::before {
   background: #fff;
 }
 .services .title::after,
-.teams .title::after {
+.teams .title::after .posts .title::after,
+.planos .title::after .planos .title::after {
   background: #111;
   content: "what i provide";
 }
 .services .serv-content .card {
-  width: calc(33% - 20px);
+  width: calc(50% - 20px);
   background: #222;
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.services .title::after {
+  content: "-";
 }
 .services .serv-content .card:hover {
   background: #3a0ca3;
@@ -305,11 +318,15 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+.services .serv-content .card p {
+  margin: 0 0 10px 0;
+  padding: 0 50px 0 50px;
+}
 
 /* skills section styling */
 
 .skills .title::after {
-  content: "what i know";
+  content: "-";
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -372,7 +389,7 @@ section .title::after {
   width: 60%;
 }
 .skills-content .right .js::before {
-  width: 80%;
+  width: 40%;
 }
 .skills-content .right .php::before {
   width: 50%;
@@ -383,7 +400,7 @@ section .title::after {
 
 /* teams section styling */
 .teams .title::after {
-  content: "who with me";
+  content: "-";
 }
 .teams .carousel .card {
   background: #222;
@@ -444,9 +461,200 @@ section .title::after {
   background: #3a0ca3 !important;
 }
 
+/* Inicio */
+/* posts section styling */
+.posts .title::after {
+  content: "Post para redes sociais";
+}
+.posts .carousel .card {
+  background: #222;
+  border-radius: 0px;
+  padding: 2px 2px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.posts .carousel .card:hover {
+  background: #3a0ca3;
+}
+.posts .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.posts .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+.posts .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+/* .posts .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #3a0ca3;
+  transition: all 0.3s ease;
+} */
+.posts .carousel .card:hover img {
+  border-color: #fff;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #3a0ca3 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #3a0ca3 !important;
+}
+/* Fim */
+
+/* Inicio */
+/* Planos para posts styling */
+.planos {
+  background: #3a0ca3;
+}
+.planos .title::after {
+  content: "Se você trabalha em uma agência, entre em contato.";
+}
+
+.planos .row {
+  display: flex;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  color: #333;
+}
+
+.planos .row {
+  font-weight: 500;
+}
+.planos .info .sub-title {
+  color: #333;
+}
+
+.planos a {
+  display: inline-block;
+  background: #3a0ca3;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin: 20px 0 20px 0;
+  border-radius: 6px;
+  border: 2px solid #3a0ca3;
+  transition: all 0.3s ease;
+  width: 80%;
+}
+.planos a:hover {
+  color: #3a0ca3;
+  background: none;
+}
+
+.planos .master a {
+  display: inline-block;
+  background: #333;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin: 20px 0 20px 0;
+  border-radius: 6px;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+  width: 80%;
+}
+.planos a:hover {
+  color: #333;
+  background: none;
+}
+
+.planos .carousel .card {
+  background: #f7f7f7;
+  box-shadow: inset 0 0 1em #f8f8f8;
+  border-radius: 6px;
+  padding: 30px 8px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.planos h3 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #3a0ca3;
+}
+.planos h2 {
+  color: #fff;
+}
+.planos .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+/* .planos .carousel .card:hover .box {
+  transform: scale(1.05);
+} */
+.planos .carousel .card .text {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px;
+}
+
+.planos .carousel .card .valor {
+  font-size: 39px;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px;
+}
+.planos .carousel .card:hover img {
+  border-color: #fff;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.planos .owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #4cc9f0 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.planos .owl-dot.active,
+.planos .owl-dot:hover {
+  background: #4cc9f0 !important;
+}
+
+/* Fim */
+
 /* contact section styling */
 .contact .title::after {
-  content: "get in touch";
+  content: "...";
 }
 .contact .contact-content .column {
   width: calc(50% - 30px);
@@ -472,7 +680,7 @@ section .title::after {
 }
 .contact .contact-content .row i {
   font-size: 25px;
-  color: crimson;
+  color: #3a0ca3;
 }
 .contact .contact-content .info .head {
   font-weight: 500;
@@ -568,14 +776,6 @@ footer span a:hover {
     height: 350px;
     width: 350px;
   }
-}
-
-@media (max-width: 991px) {
-  .max-width {
-    padding: 0 50px;
-  }
-}
-@media (max-width: 947px) {
   .menu-btn {
     display: block;
     z-index: 999;
@@ -605,9 +805,18 @@ footer span a:hover {
     margin: 20px 0;
     font-size: 25px;
   }
-  .home .home-content .text-2 {
-    font-size: 70px;
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
   }
+}
+@media (max-width: 947px) {
+  .home .home-content .text-2 {
+    font-size: 60px;
+  }
+
   .home .home-content .text-3 {
     font-size: 35px;
   }
@@ -645,7 +854,7 @@ footer span a:hover {
     padding: 0 23px;
   }
   .home .home-content .text-2 {
-    font-size: 60px;
+    font-size: 50px;
   }
   .home .home-content .text-3 {
     font-size: 32px;
@@ -656,11 +865,25 @@ footer span a:hover {
   .services .serv-content .card {
     width: 100%;
   }
+  .posts .title::after,
+  .about .title::after,
+  .skills .title::after,
+  .planos .title::after {
+    content: "-";
+  }
+  .planos .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #4cc9f0;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 500px) {
   .home .home-content .text-2 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .home .home-content .text-3 {
     font-size: 27px;
