@@ -362,24 +362,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Fale comigo</div>
-                    <form action="#" method="post"">
+                    <form action="https://api.staticforms.xyz/submit" method="post"">
                         <div class="fields">
+                            <input type="hidden" name="accessKey" value="af671cf4-a37d-4bb1-b55e-2ebb1c1849fe">
                             <div class="field name">
-                                <input type="text" placeholder="Nome" required>
+                                <input type="text" placeholder="name" name="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="E-mail" required>
+                                <input type="email" placeholder="E-mail" name="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Assunto" required>
+                            <input type="text" placeholder="Assunto" name="subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Mensagem..." required></textarea>
+                            <textarea cols="30" rows="10" name="message" placeholder="Mensagem..." required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Enviar </button>
                         </div>
+                        <input type="hidden" name="redirectTo" value="https://jandsondamasceno.github.io/#contact">
                     </form>
                 </div>
             </div>
