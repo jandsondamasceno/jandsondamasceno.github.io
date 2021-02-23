@@ -63,9 +63,9 @@
                     <img src="images/foto.jpg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">Objetivo profissional  <span class="typing-2"></span></div>
+                    <div class="text">Objetivo profissional <span class="typing-2"></span></div>
                     <p>Formado há 6 anos em redes de computadores e MBA em Infraestrutura de TI como Serviço pela IGTI, trabalhei em empresas renomadas na área, contribuindo de forma significativa no processo de desenvolvimento delas proporcionando assim, uma satisfação mútua. A partir da necessidade do mercado com o desenvolvimento acelerado nas mídias digitais, me dediquei e qualifiquei para atender ao serviço mais refinado na área de Designer, UX/UI e artes para redes sociais e impressão.</p>
-                    <a href="#">Download CV</a>
+                    <!-- <a href="#">Download CV</a> -->
                 </div>
             </div>
         </div>
@@ -108,9 +108,9 @@
             <h2 class="title">Habilidades</h2>
             <div class="skills-content">
                 <div class="column left">
-                    <div class="text">Conhecimentos e habilidades.</div>
+                    <div class="text">My creative skills & experiences.</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p>
-                    <!-- <a href="#" class="uk-box-shadow-xlarge uk-box-shadow-hover-medium uk-padding">Read more</a> -->
+                    <a href="#" class="uk-box-shadow-xlarge uk-box-shadow-hover-medium uk-padding">Read more</a>
                 </div>
                 <div class="column right">
                     <div class="bars">
@@ -253,7 +253,7 @@
                             <h3>1 arte</h3>
                             <div class="text">Criação de uma arte no formado desejado.</div>
                             <div class="valor">R$ 29,99</div>
-                            <a href="https://api.whatsapp.com/send?phone=5571991031809&text=Ol%C3%A1%20Jandson%20quero%20fazer%20uma%20artes,%20como%20contrato?">Contratar</a>
+                            <a href="#contact">Contratar</a>
                             <div class="row">
                                 <ul class="uk-list">
                                     <li>R$ 29,99 por arte</li>
@@ -270,8 +270,8 @@
                             <h3>5 artes</h3>
                             <div class="text">Criação de uma arte no formado desejado.</div>
                             <div class="valor">R$ 124,95</div>
-                            <a href="https://api.whatsapp.com/send?phone=5571991031809&text=Ol%C3%A1%20Jandson%20quero%20o%20pacote%20com%205%20artes,%20como%20contrato?">Contratar</a>
-                            <div class="row"> 
+                            <a href="#contact">Contratar</a>
+                            <div class="row">
                                 <ul class="uk-list">
                                     <li>R$ 24,99 por arte</li>
                                     <li>Contato via Whatsapp</li>
@@ -287,7 +287,7 @@
                             <h3>10 arte</h3>
                             <div class="text">Criação de uma arte no formado desejado.</div>
                             <div class="valor">R$ 179,90</div>
-                            <a href="https://api.whatsapp.com/send?phone=5571991031809&text=Ol%C3%A1%20Jandson%20quero%20o%20pacote%20com%2010%20artes,%20como%20contrato?">Contratar</a>
+                            <a href="#contact">Contratar</a>
                             <div class="row">
                                 <ul class="uk-list">
                                     <li> R$ 17,90 por arte</li>
@@ -304,7 +304,7 @@
                             <h3>Site</h3>
                             <div class="text">A combinar. </div>
                             <div class="valor">-</div>
-                            <a href="#contact">Contratar</a>
+                            <a href="#">Contratar</a>
                             <div class="row">
                                 <ul class="uk-list">
                                     <li>Total de páginas</li>
@@ -398,65 +398,24 @@
                 </div>
                 <div class="column right">
                     <div class="text">Fale comigo</div>
-                    <form action="https://api.staticforms.xyz/submit" method="post"">
+                    <form action="#">
                         <div class="fields">
-                            <input type="hidden" name="accessKey" value="af671cf4-a37d-4bb1-b55e-2ebb1c1849fe">
                             <div class="field name">
-                                <input type="text" placeholder="name" name="name" required>
+                                <input type="text" placeholder="Nome" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="E-mail" name="email" required>
+                                <input type="email" placeholder="E-mail" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Assunto" name="subject" required>
+                            <input type="text" placeholder="Assunto" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" name="message" placeholder="Mensagem..." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Mensagem..." required></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit" id="js-modal-alert">Enviar </button>
-                                                 <p uk-margin>
-
-
-                        <script>
-
-                           UIkit.util.on('#js-modal-dialog', 'click', function (e) {
-                               e.preventDefault();
-                               e.target.blur();
-                               UIkit.modal.dialog('<p class="uk-modal-body">UIkit dialog!</p>');
-                           });
-
-                           UIkit.util.on('#js-modal-alert', 'click', function (e) {
-                               e.preventDefault();
-                               e.target.blur();
-                               UIkit.modal.alert('UIkit alert!').then(function () {
-                                   console.log('Alert closed.')
-                               });
-                           });
-
-                           UIkit.util.on('#js-modal-confirm', 'click', function (e) {
-                               e.preventDefault();
-                               e.target.blur();
-                               UIkit.modal.confirm('UIkit confirm!').then(function () {
-                                   console.log('Confirmed.')
-                               }, function () {
-                                   console.log('Rejected.')
-                               });
-                           });
-
-                           UIkit.util.on('#js-modal-prompt', 'click', function (e) {
-                               e.preventDefault();
-                               e.target.blur();
-                               UIkit.modal.prompt('Name:', 'Your name').then(function (name) {
-                                   console.log('Prompted:', name)
-                               });
-                           });
-
-                        </script>
-
+                            <button type="submit">Enviar </button>
                         </div>
-                        <input type="hidden" name="redirectTo" value="https://jandsondamasceno.github.io">
                     </form>
                 </div>
             </div>
@@ -465,7 +424,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span><a href="#">Jandson Damasceno</a> | <span class="far fa-copyright"></span> 2021 - Todos os direitos reservados.</span>
+        <span><a href="https://www.codingnepalweb.com">Jandson Damasceno</a> | <span class="far fa-copyright"></span> 2021 - Todos os direitos reservados.</span>
     </footer>
 
     <script src="js/script.js"></script>
