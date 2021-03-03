@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jandson.Damasceno</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/uikit.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="js/a076d05399.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -116,14 +117,14 @@
                     <div class="bars">
                         <div class="info">
                             <span>HTML</span>
-                            <span>90%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line html"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>CSS</span>
-                            <span>60%</span>
+                            <span>50%</span>
                         </div>
                         <div class="line css"></div>
                     </div>
@@ -422,24 +423,65 @@
                 </div>
                 <div class="column right">
                     <div class="text">Fale comigo</div>
-                    <form action="#">
+                    <form action="https://api.staticforms.xyz/submit" method="post"">
                         <div class="fields">
+                            <input type="hidden" name="accessKey" value="af671cf4-a37d-4bb1-b55e-2ebb1c1849fe">
                             <div class="field name">
-                                <input type="text" placeholder="Nome" required>
+                                <input type="text" placeholder="name" name="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="E-mail" required>
+                                <input type="email" placeholder="E-mail" name="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Assunto" required>
+                            <input type="text" placeholder="Assunto" name="subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Mensagem..." required></textarea>
+                            <textarea cols="30" rows="10" name="message" placeholder="Mensagem..." required></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Enviar </button>
+                            <button type="submit" id="js-modal-alert">Enviar </button>
+                                                 <p uk-margin>
+
+
+                        <script>
+
+                           UIkit.util.on('#js-modal-dialog', 'click', function (e) {
+                               e.preventDefault();
+                               e.target.blur();
+                               UIkit.modal.dialog('<p class="uk-modal-body">UIkit dialog!</p>');
+                           });
+
+                           UIkit.util.on('#js-modal-alert', 'click', function (e) {
+                               e.preventDefault();
+                               e.target.blur();
+                               UIkit.modal.alert('UIkit alert!').then(function () {
+                                   console.log('Alert closed.')
+                               });
+                           });
+
+                           UIkit.util.on('#js-modal-confirm', 'click', function (e) {
+                               e.preventDefault();
+                               e.target.blur();
+                               UIkit.modal.confirm('UIkit confirm!').then(function () {
+                                   console.log('Confirmed.')
+                               }, function () {
+                                   console.log('Rejected.')
+                               });
+                           });
+
+                           UIkit.util.on('#js-modal-prompt', 'click', function (e) {
+                               e.preventDefault();
+                               e.target.blur();
+                               UIkit.modal.prompt('Name:', 'Your name').then(function (name) {
+                                   console.log('Prompted:', name)
+                               });
+                           });
+
+                        </script>
+
                         </div>
+                        <input type="hidden" name="redirectTo" value="https://jandsondamasceno.github.io">
                     </form>
                 </div>
             </div>
@@ -448,7 +490,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span><a href="https://www.codingnepalweb.com">Jandson Damasceno</a> | <span class="far fa-copyright"></span> 2021 - Todos os direitos reservados.</span>
+        <span><a href="https://jandsondamasceno.github.io">Jandson Damasceno</a> | <span class="far fa-copyright"></span> 2021 - Todos os direitos reservados.</span>
     </footer>
 
     <script src="js/script.js"></script>
