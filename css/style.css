@@ -391,13 +391,15 @@ section .title::after {
 .skills-content .right .js::before {
   width: 40%;
 }
-.skills-content .right .php::before {
-  width: 50%;
+.skills-content .right .photoshop::before {
+  width: 80%;
 }
-.skills-content .right .mysql::before {
+.skills-content .right .illustrator::before {
   width: 70%;
 }
-
+.skills-content .right .figma::before {
+  width: 90%;
+}
 /* teams section styling */
 .teams .title::after {
   content: "-";
