@@ -388,9 +388,11 @@ section .title::after {
 .skills-content .right .css::before {
   width: 50%;
 }
+/*
 .skills-content .right .js::before {
   width: 40%;
 }
+*/
 .skills-content .right .photoshop::before {
   width: 80%;
 }
