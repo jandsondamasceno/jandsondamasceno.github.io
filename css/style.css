@@ -620,11 +620,19 @@ section .title::after {
 }
 
 .planos .carousel .card .valor {
-  font-size: 39px;
+  font-size: 40px;
   font-weight: 700;
   margin: 0;
   padding: 10px;
 }
+
+.planos .carousel .card .desconto {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #1CA32C;
+}
+
 .planos .carousel .card:hover img {
   border-color: #fff;
 }
