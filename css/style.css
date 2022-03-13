@@ -783,6 +783,7 @@ footer span a:hover {
   }
 }
 
+
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
@@ -817,16 +818,29 @@ footer span a:hover {
     margin: 20px 0;
     font-size: 25px;
   }
+  
 }
 
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
   }
+
 }
 @media (max-width: 947px) {
   .home .home-content .text-2 {
     font-size: 60px;
+  }
+  .home  {
+  display: flex;
+  background: url("../images/banner_mob.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
   }
 
   .home .home-content .text-3 {
